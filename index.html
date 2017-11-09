@@ -1,0 +1,11 @@
+<button onclick="fetchAccessToken(handler)">add</button>
+<input id="inp" type="text"></input>
+<script>
+function fetchAccessToken(handler) {
+  $.getJSON('/token', function(data) {
+      console.log(data.token);
+      console.log(data.identity);
+      handler(data);
+  });
+}
+</script>
